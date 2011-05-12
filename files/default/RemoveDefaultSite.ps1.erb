@@ -1,0 +1,3 @@
+Import-Module WebAdministration;
+Remove-Website -Name 'Default Website';
+exit (Measure-Object $ERROR).Count;
