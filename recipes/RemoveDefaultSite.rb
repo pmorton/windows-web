@@ -1,8 +1,8 @@
-ENV['PROCESSOR_ARCHITEW6432'] == nil ? NativePowershell = "#{ENV['WINDIR']}\sysnative\WindowsPowerShell\v1.0\powershell.exe" : NativePowershell = "#{ENV['WINDIR']}\System32\WindowsPowerShell\v1.0\powershell.exe"
+ENV['PROCESSOR_ARCHITEW6432'] == nil ? NativePowershell = "#{ENV['WINDIR']}\\sysnative\\WindowsPowerShell\\v1.0\\powershell.exe" : NativePowershell = "#{ENV['WINDIR']}\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
 
 
 cookbook_file "#{ENV['TEMP']}\\RemoveDefaultSite.ps1" do
-	source 'RemoveDefaultSite.ps1'
+	source 'RemoveDefaultSite.ps1.erb'
 	action :create
 end
 
