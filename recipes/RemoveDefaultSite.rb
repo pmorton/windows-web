@@ -7,7 +7,7 @@ cookbook_file "#{ENV['TEMP']}\\RemoveDefaultSite.ps1" do
 end
 
 execute "RemoveSite" do
-	command "\"#{NativePowerShell}\" -File \"#{ENV['TEMP']}\\RemoveDefaultSite.ps1\""
+	command "\"#{NativePowershell}\" -File \"#{ENV['TEMP']}\\RemoveDefaultSite.ps1\""
 	returns 0
 	action :run
 end
